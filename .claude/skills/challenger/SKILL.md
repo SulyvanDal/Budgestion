@@ -76,9 +76,6 @@ Ce qui a été choisi, et pourquoi.
 
 ## Conséquences
 Ce que ça implique pour la suite.
-
-## Ce que j'ai appris
-Le concept clé, en deux ou trois phrases, rédigées avec l'utilisateur.
 ```
 
 Une décision qui en remplace une autre : passe l'ancienne en « remplacée par NNNN », sans

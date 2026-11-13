@@ -25,6 +25,3 @@ Prisma avec SQLite. J'écris moi-même le schéma et les requêtes Prisma. Le SQ
 - La base est un seul fichier, dans `data/` (exclu de git).
 - Les migrations passent par `prisma migrate`, et toujours avec mon accord.
 
-## Ce que j'ai appris
-
-À compléter.

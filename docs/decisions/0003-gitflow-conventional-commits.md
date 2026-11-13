@@ -27,6 +27,3 @@ Git flow, et des commits au format Conventional Commits rédigés en français.
 - Un correctif urgent se fait dans `hotfix/X.Y.Z`, qui part de `main`.
 - Rien n'est commité directement sur `main` ni sur `develop`.
 
-## Ce que j'ai appris
-
-À compléter.
