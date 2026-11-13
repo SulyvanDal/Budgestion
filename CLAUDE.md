@@ -86,6 +86,8 @@ Commit, push, création et fusion de PR : **uniquement quand je le demande**.
 
 ## Principes du domaine
 
+- **Des contraintes vérifiées plutôt que du code intelligent** : en cas de doute, refuser avec
+  un message clair, plutôt que deviner ([décision 0004](docs/decisions/0004-regles-import.md)).
 - Le format des données ne dépend pas de leur source. Chaque source (CSV Revolut, API plus
   tard, saisie à la main) a son adaptateur vers le format commun.
 - La catégorisation suit trois étapes :
