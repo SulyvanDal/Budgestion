@@ -114,14 +114,14 @@ Les points encore ouverts (doublons, devises, etc.) sont dans la fiche fonctionn
   par exemple `feat(import): lire le CSV Revolut`. Types : `feat`, `fix`, `refactor`, `test`,
   `docs`, `chore`, `build`. L'issue est référencée en pied de commit (`Refs #12` ou
   `Closes #12`).
-- **Branches (git flow)** ([décision 0003](docs/decisions/0003-gitflow-conventional-commits.md)) :
-  - `main` reçoit les versions publiées, chacune avec son tag `vX.Y.Z` ;
-  - `develop` sert à l'intégration ;
-  - `feature/<n° issue>-<sujet>` part de `develop` et y revient par une PR ;
-  - `release/X.Y.Z` part de `develop` et fusionne dans `main` et dans `develop` ;
-  - `hotfix/X.Y.Z` part de `main` et fusionne dans `main` et dans `develop`.
+- **Branches (GitHub Flow)** ([décision 0005](docs/decisions/0005-github-flow.md)) :
+  - `main` est la version que j'utilise réellement : elle doit toujours fonctionner ;
+  - une branche courte par issue, `feature/<n° issue>-<sujet>` (ou `fix/…`), part de `main` et
+    y revient par une PR, `Closes #n°` dans la description ;
+  - une PR n'est fusionnée que si les tests et la vérification des types passent ;
+  - à la fin d'une milestone, on pose un tag `vX.Y.Z` sur `main`.
 
-  Jamais de commit directement sur `main` ou `develop`.
+  Jamais de commit directement sur `main`.
 - **Suivi** : les issues et milestones GitHub, sans labels.
 
 ## Commandes

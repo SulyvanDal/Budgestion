@@ -1,6 +1,6 @@
 # 0003 — Git flow et Conventional Commits
 
-- **Statut** : acceptée
+- **Statut** : remplacée par la [0005](0005-github-flow.md) (le format Conventional Commits est conservé)
 - **Date** : 12/11/2026
 
 ## Contexte
