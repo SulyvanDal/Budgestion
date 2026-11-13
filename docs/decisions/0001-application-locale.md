@@ -31,6 +31,3 @@ code métier ne dépend pas de l'endroit où il tourne).
 - L'API Revolut, plus tard, demandera de renouveler un accord dans le navigateur tous les
   quelques mois : c'est compatible avec une application locale.
 
-## Ce que j'ai appris
-
-À compléter.
