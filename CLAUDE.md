@@ -103,7 +103,20 @@ Les points encore ouverts (doublons, devises, etc.) sont dans la fiche fonctionn
 - SQLite avec Prisma ([décision 0002](docs/decisions/0002-prisma-sqlite.md)).
 - Application locale sur `127.0.0.1`, port 4400 (front en développement : 4401)
   ([décision 0001](docs/decisions/0001-application-locale.md)).
-- À décider : framework du back-end, framework de tests, organisation des dossiers.
+- Organisation ([décision 0006](docs/decisions/0006-organisation-du-depot.md)) :
+  - workspaces npm ;
+  - back-end rangé par fonctionnalité, avec quatre couches reconnaissables à leur suffixe
+    (`.command.ts`/`.route.ts`, `.usecase.ts`, `.rules.ts`/`.adapter.ts`, `.repository.ts`) ;
+  - les tests à côté du code.
+
+  Respecte le sens des appels et la règle du résultat structuré.
+- Outillage ([décision 0007](docs/decisions/0007-outillage.md)) :
+  - Node 26 et ESM, avec le TypeScript exécuté directement par Node : pas d'`enum`, imports
+    avec l'extension `.ts` ;
+  - TypeScript en `strict` ;
+  - Vitest, ESLint avec vérification des types et règle des couches, Prettier ;
+  - intégration continue GitHub Actions.
+- À décider : framework du back-end (milestone 3).
 
 ## Conventions
 
