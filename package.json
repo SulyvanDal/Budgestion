@@ -1,0 +1,23 @@
+{
+  "name": "budgestion",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "back-end"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "prettier": "^3.10.1",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  },
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run test --workspaces",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ."
+  }
+}
