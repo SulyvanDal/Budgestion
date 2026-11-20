@@ -30,8 +30,9 @@ que le code n'arrive dans `main`, la version utilisée ([décision 0005](0005-gi
 - **Vitest** pour les tests.
 - **ESLint** : règles recommandées de `@eslint/js` et de `typescript-eslint`, avec vérification
   des types. **Règle des couches** : un `.rules.ts` ou un `.adapter.ts` ne peut importer ni un
-  `.repository.ts`, ni Prisma (ni `db/`), ni les modules de Node qui lisent ou écrivent des
-  fichiers.
+  `.repository.ts`, ni Prisma (ni `db/`), ni les modules de Node qui font des entrées-sorties
+  (fichiers, réseau, processus, terminal, SQLite). Les modules de calcul pur (`path`,
+  `crypto`…) restent permis.
 - **Prettier**, avec la configuration de Trek : points-virgules, guillemets doubles, virgule
   finale partout.
 - **Intégration continue** (GitHub Actions), à chaque PR vers `main` et à chaque arrivée de code
@@ -46,7 +47,15 @@ que le code n'arrive dans `main`, la version utilisée ([décision 0005](0005-gi
 - TypeScript ne signale pas les colonnes manquantes d'une ligne CSV : l'adaptateur (#4) vérifie
   explicitement le nombre de colonnes.
 - Une erreur de couche ([décision 0006](0006-organisation-du-depot.md)) fait échouer le lint.
+  Limite : la règle ne voit que les `import`. Les entrées-sorties par variable globale
+  (`fetch`, `process`, `console`) ne sont pas contrôlées ; à revoir plus tard, au plus tard
+  avec l'adaptateur de l'API Revolut.
 - L'intégration continue n'utilise que des données fabriquées, sans secret ni appel payant.
 - Le front (milestone 3) réutilisera Vitest, ESLint et Prettier depuis la racine.
 - Dépendances de développement ajoutées : `typescript`, `@types/node`, `vitest`, `eslint`,
   `@eslint/js`, `typescript-eslint`, `prettier`.
+- **TypeScript reste en 6.0** (`~6.0`), et non en 7, tant que `typescript-eslint` n'accepte
+  pas la version 7 (au 13/11/2026, il accepte `>=4.8.4 <6.1.0`). `@types/node` suit la version
+  de Node (26).
+- Prettier ignore le Markdown (`*.md`), dont la mise en forme reste manuelle, et
+  `package-lock.json`, généré par npm.

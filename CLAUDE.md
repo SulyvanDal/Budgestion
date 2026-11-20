@@ -139,4 +139,15 @@ Les points encore ouverts (doublons, devises, etc.) sont dans la fiche fonctionn
 
 ## Commandes
 
-À compléter au fil du projet.
+Toutes se lancent depuis la racine.
+
+| Commande | Rôle |
+|---|---|
+| `npm install` | Installer les dépendances de tous les workspaces. |
+| `npm test` | Lancer les tests (Vitest), en une seule passe. |
+| `npm run typecheck` | Vérifier les types (`tsc`). |
+| `npm run lint` | Lint (ESLint) : erreurs probables et règle des couches. |
+| `npm run format` | Formater le code (Prettier). |
+| `npm run format:check` | Vérifier le formatage, sans rien modifier. |
+
+L'intégration continue lance `format:check`, `lint`, `typecheck` et `test`, dans cet ordre.
