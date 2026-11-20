@@ -1,0 +1,12 @@
+{
+  "name": "@budgestion/back-end",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.6"
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run"
+  }
+}
